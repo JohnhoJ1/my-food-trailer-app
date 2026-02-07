@@ -36,7 +36,7 @@ export default function About() {
 
         <div>
           <img
-            src="/trailer.png"
+            src="https://fireflyfabrication.com/wp-content/uploads/2025/01/HIMALAYA-MOMO-3-1024x683.jpg"
             alt="Momo Wheels Food Trailer"
             className="rounded-2xl shadow-lg w-full object-cover"
           />
