@@ -10,7 +10,7 @@ export default function Home() {
       <section className="relative bg-black text-white">
         <div className="absolute inset-0">
           <img
-            src="/hero.png"
+            src="https://foodtrucksworld.com/wp-content/uploads/2024/01/Potala-Momo-Food-Truck-1024x576.png"
             alt="Momo Wheels Trailer"
             className="w-full h-full object-cover opacity-40"
           />

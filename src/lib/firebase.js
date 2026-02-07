@@ -8,17 +8,17 @@ import { getStorage } from "firebase/storage";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAld3znZwUb_iCSuO_-Xf9r4AMgjjw4tB4",
-  authDomain: "my-food-trailer-app.firebaseapp.com",
-  projectId: "my-food-trailer-app",
-  storageBucket: "my-food-trailer-app.firebasestorage.app",
-  messagingSenderId: "966781418960",
-  appId: "1:966781418960:web:9846bd5bf80d64c69d0dd5",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
   measurementId: "G-X0H829R275",
 };
 
 // Initialize Firebase app only once
-const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
+export const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 
 // Export Firestore database
 export const db = getFirestore(app);
