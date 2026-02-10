@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import { getMenu } from "@/lib/getMenu";
 
+import { createCheckoutSession } from "@/app/actions/createCheckout";
+
 export default async function MenuPage() {
   const menu = await getMenu();
 
@@ -58,6 +60,10 @@ export default async function MenuPage() {
                 {/* Spacer */}
                 <div className="mt-auto">
                   <button
+                    onClick={async () => {
+                      const url = await createCheckoutSession(item);
+                      window.location.href = url;
+                    }}
                     disabled={!item.available}
                     className={`w-full py-2 rounded-full font-semibold transition 
                       ${
